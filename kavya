@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Love Confession</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #333;
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
+        button {
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #c0392b;
+        }
+
+        #page2,
+        #page3,
+        #page4 {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Page 1 -->
+    <div id="page1">
+        <h1>Hello Kashish</h1>
+        <button onclick="showPage('page2')">Unlock My Feelings</button>
+    </div>
+
+    <!-- Page 2 -->
+    <div id="page2" style="display: none;">
+        <p>I was waiting from a long time to say this, trying to wait for the best timing, best day, but then I figured there's no right time, it's when you say, things become right.</p>
+        <button onclick="showPage('page1')">Go to Page 1</button>
+        <button onclick="showPage('page3')">Ready for More?</button>
+    </div>
+
+    <!-- Page 3 -->
+    <div id="page3" style="display: none;">
+        <p>I believe you must have figured out what I'm about to say? Right?</p>
+        <button onclick="showPage('page2')">Go Back</button>
+        <button onclick="showPage('page4')">Last Confession</button>
+    </div>
+
+    <!-- Page 4 -->
+    <div id="page4" style="display: none;">
+        <p>I've had a crush on you for quite long. It's last year, last sem. I didn't want to end it with a regret of not telling you. I do sorta like you. Like there's a lot to say, but I'll prefer saying it face to face. So ðð»ðð» let me know whatever is on your mind.</p>
+        <button onclick="showPage('page3')">Go Back</button>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            document.getElementById('page1').style.display = 'none';
+            document.getElementById('page2').style.display = 'none';
+            document.getElementById('page3').style.display = 'none';
+            document.getElementById('page4').style.display = 'none';
+
+            // Show the selected page
+            document.getElementById(pageId).style.display = 'block';
+        }
+    </script>
+
+</body>
+
+</html>
